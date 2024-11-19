@@ -1,0 +1,77 @@
+<div class="site-content">
+  <div class="panel panel-default m-b-0">
+        <div class="panel-heading">
+      <div class="row">
+        <div class="col-xs-6">
+          <h1 class="m-t-0 m-b-5">Artículos</h1>
+        </div>
+        <div class="col-xs-6" style="display: flex; justify-content: end;">
+          <button type="button" class="btn btn-primary btn-pill m-w-120" data-toggle="modal" data-target="#otherModal1">Añadir Artículo</button>        
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" id="article_gerative">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="otherModal1" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="zmdi zmdi-close"></i>
+          </span>
+        </button>
+        <h4 class="modal-title">Registrar Artículos</h4>
+      </div>
+      <div class="modal-body">
+        <form action="{{ url_for('upload_article') }}" method="POST" enctype="multipart/form-data">
+          <!-- Nombre Artículo -->
+          <div class="form-group">
+            <label for="nombre_articulo" class="control-label">Nombre Artículo</label>
+            <input type="text" class="form-control" id="nombre_articulo" name="nombre_articulo" placeholder="Articulo" required>
+          </div>
+          
+          <!-- Descripción Artículo -->
+          <div class="form-group">
+            <label for="descripcion_articulo" class="control-label">Descripción Artículo</label>
+            <textarea id="descripcion_articulo" name="descripcion_articulo" class="form-control" rows="3" required></textarea>
+            <div class="help-block with-errors">Una breve descripción.</div>
+          </div>
+
+          <!-- Precio Artículo -->
+          <div class="form-group">
+            <label for="precio_articulo" class="control-label">Precio Artículo</label>
+            <div class="input-group">
+              <span class="input-group-addon">S/</span>
+              <input type="number" class="form-control" id="precio_articulo" name="precio_articulo" placeholder="0000000" required>
+            </div>
+          </div>
+
+          <!-- Cargar Imagen -->
+          <div class="form-group">
+            <label for="imagen_articulo" class="control-label">Cargar Imagen</label>
+            <div class="custom-file-upload">
+              <input type="file" class="form-control-file-hidden custom-file-input" id="imagen_articulo" name="imagen_articulo" accept="image/*" onchange="previewImage(event)" required>
+            </div>
+            <div id="image-preview-container" style="display: none;">
+              <div class="preview-wrapper">
+                <label for="image-preview" class="control-label">Vista Previa:</label>
+                <img id="image-preview" src="" alt="Vista previa" />
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer text-center">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

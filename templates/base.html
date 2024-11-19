@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SENATI</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cosmos.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/application.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom_code_base.css') }}">
+  </head>
+  <body class="layout layout-header-fixed layout-left-sidebar-fixed" id="" class="">
+  <div class="site-overlay"></div>
+  <div class="site-header" id="header" class="header">
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index-2.html">
+          <img src="{{ url_for('static', filename='img/logo.png') }}" alt="" height="25">
+          <span>Senati</span>
+        </a>
+        <button class="navbar-toggler left-sidebar-toggle pull-left visible-xs" type="button">
+          <span class="hamburger"></span>
+        </button>
+        <button class="navbar-toggler right-sidebar-toggle pull-right visible-xs-block" type="button">
+          <i class="zmdi zmdi-long-arrow-left"></i>
+          <div class="dot bg-danger"></div>
+        </button>
+        <button class="navbar-toggler pull-right visible-xs-block" type="button" data-toggle="collapse" data-target="#navbar">
+          <span class="more"></span>
+        </button>
+      </div>
+      <div class="navbar-collapsible">
+        <div id="navbar" class="navbar-collapse collapse">
+          <button class="navbar-toggler left-sidebar-collapse pull-left hidden-xs" type="button">
+            <span class="hamburger"></span>
+          </button>
+          <ul class="nav navbar-nav">
+            <li class="visible-xs-block">
+              <div class="nav-avatar">
+                <img class="img-circle" src="{{ url_for('static', filename='img/avatars/1.jpg') }}" alt="" width="48" height="48">
+              </div>
+              <h4 class="navbar-text text-center">Welcome, Jon Snow!</h4>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-table dropdown visible-xs-block">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="nav-cell nav-icon">
+                  <i class="zmdi zmdi-account-o"></i>
+                </span>
+                <span class="hidden-md-up m-l-15">Account</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Help</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+            <li class="nav-table dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="nav-cell nav-icon">
+                  <i class="zmdi zmdi-notifications-none"></i>
+                </span>
+                <span class="hidden-md-up m-l-15">Notifications</span>
+                <span class="label label-success">3</span>
+              </a>
+              <div class="dropdown-menu custom-dropdown dropdown-notifications dropdown-menu-right">
+                <div class="dropdown-header">
+                  <span>Notifications</span>
+                  <a href="#" class="text-primary">Mark all as read</a>
+                </div>
+                <div class="n-items">
+                  <div class="custom-scrollbar">
+                    <div class="n-item">
+                      <div class="ni-img">
+                        <img class="img-circle" src="img/avatars/1.jpg" alt="" width="40" height="40">
+                      </div>
+                      <div class="ni-text"><a href="#">John Doe</a> is now following <a href="#">Kate Morris</a>.</div>
+                      <div class="ni-time">10 min</div>
+                    </div>
+                    <div class="n-item">
+                      <div class="ni-img">
+                        <img class="img-circle" src="img/avatars/2.jpg" alt="" width="40" height="40">
+                      </div>
+                      <div class="ni-text"><a href="#">Alexander Olsen</a> liked post <a href="#">Getting Started with SASS</a>.</div>
+                      <div class="ni-time">40 min</div>
+                    </div>
+                    <div class="n-item">
+                      <div class="ni-img">
+                        <img class="img-circle" src="img/avatars/3.jpg" alt="" width="40" height="40">
+                      </div>
+                      <div class="ni-text"><a href="#">Linda Davis</a> commented post <a href="#">How to use Bower</a>.</div>
+                      <div class="ni-time">3 hours</div>
+                    </div>
+                    <div class="n-item">
+                      <div class="ni-img">
+                        <img class="img-circle" src="img/avatars/4.jpg" alt="" width="40" height="40">
+                      </div>
+                      <div class="ni-text"><a href="#">John Doe</a> is now following <a href="#">Kate Morris</a>.</div>
+                      <div class="ni-time">10 min</div>
+                    </div>
+                    <div class="n-item">
+                      <div class="ni-img">
+                        <img class="img-circle" src="img/avatars/5.jpg" alt="" width="40" height="40">
+                      </div>
+                      <div class="ni-text"><a href="#">Alexander Olsen</a> liked post <a href="#">Getting Started with SASS</a>.</div>
+                      <div class="ni-time">40 min</div>
+                    </div>
+                    <div class="n-item">
+                      <div class="ni-img">
+                        <img class="img-circle" src="img/avatars/6.jpg" alt="" width="40" height="40">
+                      </div>
+                      <div class="ni-text"><a href="#">Linda Davis</a> commented post <a href="#">How to use Bower</a>.</div>
+                      <div class="ni-time">3 hours</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-footer">
+                  <a href="#">View all notifications</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-table dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="nav-cell nav-icon">
+                  <i class="fa-solid fa-sun"></i>
+                </span>
+              </a>
+              <div class="dropdown-menu custom-dropdown dropdown-icons dropdown-menu-right">
+                <div class="m-items icons-container">
+                  <button class="icon-btn" data-theme="day">
+                    <div class="icon-wrapper bg-warning">
+                      <i class="fa-solid fa-sun"></i> <!-- Icono Día -->
+                    </div>
+                    <span class="icon-text">Día</span>
+                  </button>
+                  <button class="icon-btn" data-theme="night">
+                    <div class="icon-wrapper bg-info">
+                      <i class="fa-solid fa-moon"></i> <!-- Icono Noche -->
+                    </div>
+                    <span class="icon-text">Noche</span>
+                  </button>
+                  <button class="icon-btn" data-theme="auto">
+                    <div class="icon-wrapper bg-primary">
+                      <i class="fa-solid fa-gear"></i> <!-- Icono Automático -->
+                    </div>
+                    <span class="icon-text">Automático</span>
+                  </button>
+                </div>                
+              </div>
+            </li>
+                      
+            <li class="nav-table dropdown hidden-sm-down">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="nav-cell p-r-10">
+                  <img class="img-circle" src="{{ url_for('static', filename='img/avatars/1.jpg') }}" alt="" width="32" height="32">
+                </span>
+                <span class="nav-cell">Jon Snow
+                  <span class="caret"></span>
+                </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    <i class="zmdi zmdi-account-o m-r-10"></i> Profile</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="zmdi zmdi-settings m-r-10"></i> Settings</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="zmdi zmdi-help-outline m-r-10"></i> Help</a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a href="#">
+                    <i class="zmdi zmdi-power m-r-10"></i> Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+    <div class="site-main header" id="main-content" class="main-content">
+      <div class="site-left-sidebar">
+        <div class="sidebar-backdrop"></div>
+        <div class="custom-scrollbar">
+          <ul class="sidebar-menu">
+            <li class="menu-title">Registros</li>
+            <li>
+              <a href="{{ url_for('inicio_dashboard') }}">
+                <span class="menu-icon">
+                  <i class="zmdi zmdi-home"></i>
+                </span>
+                <span class="menu-text">Inicio</span>
+              </a>
+            </li>
+            <li class="with-sub active">
+              <a href="#" aria-haspopup="true">
+                <span class="menu-icon">
+                  <i class="zmdi zmdi-view-web"></i>
+                </span>
+                <span class="menu-text">Web</span>
+              </a>
+              <ul class="sidebar-submenu collapse">
+                <li class="menu-subtitle">Web</li>
+                <li><a href="{{ url_for('slider') }}"><i class="far fa-circle"></i> Slider</a></li>
+                <li><a href="{{ url_for('articulos') }}"><i class="far fa-circle"></i> Artículo</a></li>
+                <li><a href="{{ url_for('imagenes') }}"><i class="far fa-circle"></i> Galeria Imagenes</a></li>
+                <li><a href="{{ url_for('videos') }}"><i class="far fa-circle"></i> Videos</a></li>
+                <li><a href="{{ url_for('suscriptores') }}"><i class="far fa-circle"></i> Cliente</a></li>
+              </ul>
+          </ul>
+        </div>
+      </div>
+
+    <!-- Contenido dinámico -->
+    <div id="content-area">
+        {% include content_template %}
+        </div>
+          
+        <div class="site-footer" id="">
+          <div class="pull-right hidden-xs">
+              <b>Version</b> 0.1
+            </div>
+          <strong>Copyright &copy; 2024 <a href="www.facebook.com/TarGraf">SENATI</a>.</strong> All rights reserved.
+          </div>
+      </div>
+      <!-- jQuery -->
+      <script src="{{ url_for('static', filename='js/vendor.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/cosmos.min.js') }}"></script>
+      <!-- AdminLTE App -->
+      <script src="{{ url_for('static', filename='js/application.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/slider.js') }}"></script>
+      <!-- DATATABLES -->
+      <script src="{{ url_for('static', filename='js/tables-datatables.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/custome_code_base.js') }}"></script>
+      <script src="{{ url_for('static', filename='response/article.js') }}"></script>
+      <script src="{{ url_for('static', filename='response/galery.js') }}"></script>
+    </body>
+  </html>

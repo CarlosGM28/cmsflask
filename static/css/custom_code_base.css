@@ -1,0 +1,216 @@
+/* Estilo del dropdown */
+.custom-dropdown.dropdown-icons {
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon-btn {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1); /* Agranda el botón al pasar el mouse */
+}
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.icon-wrapper i {
+  font-size: 24px;
+  color: white;
+}
+
+.icon-text {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.icon-btn:hover .icon-wrapper {
+  background-color: #f39c12; /* Cambia el color al pasar el mouse */
+}
+
+/* Ajustes para el dropdown */
+.dropdown-menu {
+  padding: 0;
+  border: none;
+  margin-top: 10px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+  /* Estilos para botones generales */
+  .custom-button {
+    border: none;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+
+  /* Efecto hover general para todos los botones */
+  .custom-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Estilos específicos para cada ícono */
+  .btn-slider i {
+    color: #3498db; /* Azul */
+  }
+  .btn-slider:hover i {
+    color: #2980b9; /* Azul más oscuro en hover */
+  }
+
+  .btn-articulos i {
+    color: #e74c3c; /* Rojo */
+  }
+  .btn-articulos:hover i {
+    color: #c0392b; /* Rojo más oscuro en hover */
+  }
+
+  .btn-imagenes i {
+    color: #27ae60; /* Verde */
+  }
+  .btn-imagenes:hover i {
+    color: #1e8449; /* Verde más oscuro en hover */
+  }
+
+  .btn-videos i {
+    color: #f1c40f; /* Amarillo */
+  }
+  .btn-videos:hover i {
+    color: #f39c12; /* Amarillo más oscuro en hover */
+  }
+
+  .btn-suscriptores i {
+    color: #9b59b6; /* Púrpura */
+  }
+  .btn-suscriptores:hover i {
+    color: #8e44ad; /* Púrpura más oscuro en hover */
+  }
+
+/* Estilo para el formulario flotante */
+#imageInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#imageContainer:hover #imageInfo {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Estilo de los campos de texto */
+#titulo, #descripcion {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#titulo {
+  font-size: 16px;
+}
+
+#descripcion {
+  font-size: 14px;
+}
+
+  /* Ocultar el input de archivo nativo */
+  .form-control-file-hidden {
+    display: none;
+  }
+
+  /* Área de carga personalizada */
+  .custom-file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    border: 2px dashed #007bff;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    width: 100%; /* Ancho completo para el input file */
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  /* Efecto hover en el área de carga */
+  .custom-file-upload:hover {
+    background-color: #e6f2ff;
+    border-color: #0056b3;
+  }
+
+  /* Estilo para el contenedor de la vista previa */
+  #image-preview-container {
+    margin-top: 10px;
+    text-align: center; /* Centrar el texto */
+  }
+
+  /* Estilo para la vista previa de la imagen */
+  .preview-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar la imagen */
+    justify-content: center;
+  }
+
+  #image-preview-container img {
+    max-width: 40%; 
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  /* Estilo del texto "Vista Previa" */
+  .control-label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
