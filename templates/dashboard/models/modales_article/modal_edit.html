@@ -1,0 +1,58 @@
+<div id="EditModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <i class="zmdi zmdi-close"></i>
+                    </span>
+                </button>
+                <h4 class="modal-title"><u>Editar Artículo</u></h4>
+            </div>
+            <div class="modal-body">
+                <form action="{{ url_for('update_article') }}" method="POST" enctype="multipart/form-data" id="updatearticle">
+                    <!-- Campo oculto para id_article -->
+                    <input type="hidden" id="id_article" name="id_article" value="id_article">
+
+                    <!-- Nombre Artículo -->
+                    <div class="form-group">
+                        <label for="nombre_articulo" class="control-label">Nombre Artículo</label>
+                        <input type="text" class="form-control" id="nombre_articulo" name="nombre_articulo" placeholder="Articulo" required>
+                    </div>
+
+                    <!-- Descripción Artículo -->
+                    <div class="form-group">
+                        <label for="descripcion_articulo" class="control-label">Descripción Artículo</label>
+                        <textarea id="descripcion_articulo" name="descripcion_articulo" class="form-control" rows="3" required></textarea>
+                    </div>
+
+                    <!-- Precio Artículo -->
+                    <div class="form-group">
+                        <label for="precio_articulo" class="control-label">Precio Artículo</label>
+                        <input type="number" class="form-control" id="precio_articulo" name="precio_articulo" placeholder="Precio" required>
+                    </div>
+
+                    <!-- Cargar Imagen -->
+                    <div class="form-group">
+                        <label for="imagen_articulo" class="control-label">Cargar Imagen</label>
+                        <div class="custom-file-upload">
+                            <input type="file" class="form-control-file-hidden custom-file-input" id="imagen_articulo" name="imagen_articulo" accept="image/*" onchange="previewImage(event)">
+                        </div>
+                    </div>
+
+                    <!-- Vista previa de la imagen -->
+                    <div id="image-preview-container-edit">
+                        <div class="preview-wrapper">
+                            <label for="image-preview-edit" class="control-label">Vista Previa:</label>
+                            <img id="image-preview-edit" src="" alt="Vista previa" />
+                        </div>
+                    </div>
+
+                    <div class="modal-footer text-center">
+                        <button type="submit" class="btn btn-primary">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

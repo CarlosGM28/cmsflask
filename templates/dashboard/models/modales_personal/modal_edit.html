@@ -1,0 +1,78 @@
+<div id="editarPersonal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-primary">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="zmdi zmdi-close"></i>
+            </span>
+          </button>
+          <h4 class="modal-title">Editar Personal</h4>
+        </div>
+        <div class="modal-body">
+          <form action="{{ url_for('update_personal') }}" method="POST" enctype="multipart/form-data" id="personalRegister">
+            
+            <!-- DNI -->
+            <div class="form-group">
+              <label for="dni_editar" class="control-label">DNI</label>
+              <input type="text" class="form-control" id="dni_editar" name="dni_editar" placeholder="Ingrese el DNI" required>
+            </div>
+  
+            <!-- Nombre Completo -->
+            <div class="form-group">
+              <label for="nombre_completo_editar" class="control-label">Nombre Completo</label>
+              <input type="text" class="form-control" id="nombre_completo_editar" name="nombre_completo_editar" placeholder="Ingrese el nombre completo" required>
+            </div>
+  
+            <!-- Cargo -->
+            <div class="form-group">
+              <label for="cargo_editar" class="control-label">Cargo</label>
+              <input type="text" class="form-control" id="cargo_editar" name="cargo_editar" placeholder="Ingrese el cargo" required>
+            </div>
+  
+            <!-- Departamento -->
+            <div class="form-group">
+              <label for="departamento_editar" class="control-label">Departamento</label>
+              <input type="text" class="form-control" id="departamento_editar" name="departamento_editar" placeholder="Ingrese el departamento" required>
+            </div>
+  
+            <!-- Correo Electrónico -->
+            <div class="form-group">
+              <label for="correo_empresa_editar" class="control-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="correo_empresa_editar" name="correo_empresa_editar" placeholder="Ingrese el correo electrónico" required>
+            </div>
+  
+            <!-- Teléfono -->
+            <div class="form-group">
+              <label for="telefono_editar" class="control-label">Teléfono</label>
+              <input type="text" class="form-control" id="telefono_editar" name="telefono_editar" placeholder="Ingrese el teléfono" required>
+            </div>
+  
+            <!-- Fecha de Contratación -->
+            <div class="form-group">
+              <label for="fecha_contratacion_editar" class="control-label">Fecha de Contratación</label>
+              <input type="date" class="form-control" id="fecha_contratacion_editar" name="fecha_contratacion_editar" required>
+            </div>
+  
+            <!-- Cargar Imagen -->
+            <div class="form-group">
+              <label for="imagen_articulo_editar" class="control-label">Cargar Imagen</label>
+              <div class="custom-file-upload">
+                <input type="file" class="form-control-file-hidden custom-file-input" id="imagen_articulo_editar" name="imagen_articulo_editar" accept="image/*" onchange="previewImage(event)">
+              </div>
+              <div id="image-preview-container_editar">
+                <div class="preview-wrapper">
+                  <label for="image-preview_editar" class="control-label">Vista Previa:</label>
+                  <img id="image-preview_editar" src="" alt="Vista previa" />
+                </div>
+              </div>
+            </div>
+  
+            <div class="modal-footer text-center">
+              <button type="submit" class="btn btn-primary" id="savePersonal_editar">Guardar Cambios</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

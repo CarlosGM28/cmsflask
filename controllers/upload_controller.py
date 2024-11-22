@@ -42,7 +42,7 @@ def upload_file():
         # Guarda en la base de datos en la ruta 'imagenes'
         db.child("imagenes").push(data)
 
-        return jsonify({"message": "Archivo subido y nombre guardado en Firebase", "filename": image_name}), 200
+        return jsonify({"message": "Articulo registrado", "filename": image_name}), 200
     
     return "Archivo no permitido", 400
 

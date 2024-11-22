@@ -211,11 +211,10 @@
               </a>
               <ul class="sidebar-submenu collapse">
                 <li class="menu-subtitle">Web</li>
-                <li><a href="{{ url_for('slider') }}"><i class="far fa-circle"></i> Slider</a></li>
                 <li><a href="{{ url_for('articulos') }}"><i class="far fa-circle"></i> Artículo</a></li>
                 <li><a href="{{ url_for('imagenes') }}"><i class="far fa-circle"></i> Galeria Imagenes</a></li>
                 <li><a href="{{ url_for('videos') }}"><i class="far fa-circle"></i> Videos</a></li>
-                <li><a href="{{ url_for('suscriptores') }}"><i class="far fa-circle"></i> Cliente</a></li>
+                <li><a href="{{ url_for('personal') }}"><i class="far fa-circle"></i> Personal</a></li>
               </ul>
           </ul>
         </div>
@@ -244,5 +243,7 @@
       <script src="{{ url_for('static', filename='js/custome_code_base.js') }}"></script>
       <script src="{{ url_for('static', filename='response/article.js') }}"></script>
       <script src="{{ url_for('static', filename='response/galery.js') }}"></script>
+      <script src="{{ url_for('static', filename='response/video.js') }}"></script>
+      <script src="{{ url_for('static', filename='response/personal.js') }}"></script>
     </body>
   </html>

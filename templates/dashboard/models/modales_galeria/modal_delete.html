@@ -1,0 +1,30 @@
+<div id="dangerModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <i class="zmdi zmdi-close"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <div class="text-danger">
+                        <i class="zmdi zmdi-alert-triangle zmdi-hc-5x"></i>
+                    </div>
+                    <h3>¡Cuidado!</h3>
+                    <p>¿Estás seguro de que deseas eliminar esta imagen? Esta acción no se puede deshacer.</p>
+                    <form id="id_img_delete" method="POST" action="{{ url_for('img_delete') }}">
+                        <input type="hidden" id="imgdelete" name="imgdelete" value="imgdelete">
+                        <div class="m-y-30">
+                            <button type="submit" class="btn btn-danger">Eliminar Producto</button>
+                            <button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<div id="otherModal1" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="zmdi zmdi-close"></i>
+          </span>
+        </button>
+        <h4 class="modal-title">Registrar Personal</h4>
+      </div>
+      <div class="modal-body">
+        <form action="{{ url_for('personales') }}" method="POST" enctype="multipart/form-data" id="personalRegister">
+          
+          <!-- DNI -->
+          <div class="form-group">
+            <label for="dni" class="control-label">DNI</label>
+            <input type="text" class="form-control" id="dni" name="dni" placeholder="Ingrese el DNI" required>
+          </div>
+
+          <!-- Nombre Completo -->
+          <div class="form-group">
+            <label for="nombre_completo" class="control-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" placeholder="Ingrese el nombre completo" required>
+          </div>
+
+          <!-- Cargo -->
+          <div class="form-group">
+            <label for="cargo" class="control-label">Cargo</label>
+            <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Ingrese el cargo" required>
+          </div>
+
+          <!-- Departamento -->
+          <div class="form-group">
+            <label for="departamento" class="control-label">Departamento</label>
+            <input type="text" class="form-control" id="departamento" name="departamento" placeholder="Ingrese el departamento" required>
+          </div>
+
+          <!-- Correo Electrónico -->
+          <div class="form-group">
+            <label for="correo_empresa" class="control-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo_empresa" name="correo_empresa" placeholder="Ingrese el correo electrónico" required>
+          </div>
+
+          <!-- Teléfono -->
+          <div class="form-group">
+            <label for="telefono" class="control-label">Teléfono</label>
+            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ingrese el teléfono" required>
+          </div>
+
+          <!-- Fecha de Contratación -->
+          <div class="form-group">
+            <label for="fecha_contratacion" class="control-label">Fecha de Contratación</label>
+            <input type="date" class="form-control" id="fecha_contratacion" name="fecha_contratacion" required>
+          </div>
+
+          <!-- Cargar Imagen -->
+          <div class="form-group">
+            <label for="imagen_articulo" class="control-label">Cargar Imagen</label>
+            <div class="custom-file-upload">
+              <input type="file" class="form-control-file-hidden custom-file-input" id="imagen_articulo" name="imagen_articulo" accept="image/*" onchange="previewImage(event)">
+            </div>
+            <div id="image-preview-container" style="display: none;">
+              <div class="preview-wrapper">
+                <label for="image-preview" class="control-label">Vista Previa:</label>
+                <img id="image-preview" src="" alt="Vista previa" />
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer text-center">
+            <button type="submit" class="btn btn-primary" id="savePersonal">Registrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

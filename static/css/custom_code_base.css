@@ -207,10 +207,86 @@
     border-radius: 5px;
     margin-top: 10px;
   }
+  /* Estilo para el contenedor de la vista previa */
+  #image-preview-container-edit {
+    margin-top: 10px;
+    text-align: center; /* Centrar el texto */
+  }
 
+  #image-preview-container-edit img {
+    max-width: 40%; 
+    border-radius: 5px;
+    margin-top: 10px;
+  }
   /* Estilo del texto "Vista Previa" */
   .control-label {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 5px;
   }
+
+  .custom-file-upload {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .custom-upload-btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+  }
+  
+  .custom-upload-btn:hover {
+    background-color: #007bff; /* Color de hover */
+    color: white;
+  }
+  
+  .file-name-label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .video-preview-frame {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+
+  .save-video-btn {
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 15px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+    border: none;
+  }
+  
+  .save-video-btn:hover {
+    background-color: #28a745; /* Color de hover */
+    color: white;
+  }
+  
+  th.empty-cell, td.empty-cell {
+    pointer-events: none;  /* Deshabilitar interacción */
+    background-color: #f8f9fa;  /* Fondo para que sea obvio que está deshabilitado */
+    color: #ddd;  /* Texto deshabilitado */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espacio entre los botones */
+}
